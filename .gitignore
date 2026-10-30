@@ -1,0 +1,79 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+/.pytest_cache/
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# aris tool cache (paper-verification scratch, not project source)
+/.aris/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local environment
+.env*
+!.env.example
+
+# local backend runtime and collected data
+/backend/.venv/
+/backend/.pytest_cache/
+/backend/src/**/*.egg-info/
+**/__pycache__/
+*.py[cod]
+/data/
+*.db-wal
+*.db-shm
+
+# asset registry runtime data (server-written, see docs/ASSET_REGISTRY.md)
+/assets/
+
+# upstream meshes and textures materialized under expert_demos/*/runtime/
+# (no trailing slash: cloth_v1/runtime/source/assets is a symlink, not a directory)
+/expert_demos/*/runtime/upstream_assets
+/expert_demos/*/runtime/source/assets
+
+# typescript incremental build info
+/tsconfig.tsbuildinfo
+
+# deployment and generated files
+.vercel
+next-env.d.ts
+/dist/
+/.wrangler/
+/outputs/
+/work/
+
+# Private keys and local credentials
+*.key
+/.secrets/
+/credentials/
+
+# Internal verification, optional console builds and nested environments
+/.release-checks/
+**/node_modules/
+**/.venv/
+**/*.egg-info/
+**/build/
+**/dist/
+/teleop/src/gello_remote/web/console/
+/teleop/web_console/tsconfig.tsbuildinfo

@@ -1,0 +1,48 @@
+{
+  "format": "robot_data_studio_camera_profile",
+  "format_version": 1,
+  "id": "roboverse_sapien_base_v1",
+  "label": "RoboVerse SAPIEN3 固定 Base RGB",
+  "match_level": "intrinsics_matched",
+  "dataset_fps_default": 20,
+  "roles": {
+    "agentview": {
+      "enabled": true,
+      "model": "MetaSim SAPIEN3 PinholeCamera",
+      "calibration_source_serial": null,
+      "mount": "fixed_world",
+      "nominal_vertical_fov_deg": 42.0,
+      "stream": {
+        "width": 640,
+        "height": 480,
+        "source_fps": 20,
+        "format": "rgb8"
+      },
+      "intrinsics": {
+        "fx": 625.221376,
+        "fy": 625.221376,
+        "cx": 320.0,
+        "cy": 240.0
+      },
+      "distortion": null
+    }
+  },
+  "inventory": [],
+  "engine_overrides": {
+    "roboverse_sapien3": {
+      "base": {
+        "position_world_m": [
+          1.1,
+          -1.1,
+          0.9
+        ],
+        "lookat_world_m": [
+          -0.1,
+          0.0,
+          0.15
+        ],
+        "vertical_fov_deg": 42.0
+      }
+    }
+  }
+}

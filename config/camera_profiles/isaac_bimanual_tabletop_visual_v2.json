@@ -1,0 +1,139 @@
+{
+  "format": "robot_data_studio_camera_profile",
+  "format_version": 1,
+  "id": "isaac_bimanual_tabletop_visual_v2",
+  "label": "Isaac 固定双臂桌面参考图视角 v2",
+  "match_level": "nominal_pending_intrinsics",
+  "dataset_fps_default": 10,
+  "roles": {
+    "agentview": {
+      "enabled": true,
+      "model": "virtual_pinhole",
+      "calibration_source_serial": "virtual-bimanual-agentview",
+      "mount": "fixed_external",
+      "nominal_vertical_fov_deg": 48.0,
+      "stream": {
+        "width": 640,
+        "height": 480,
+        "source_fps": 30,
+        "format": "rgb8"
+      },
+      "intrinsics": null,
+      "distortion": null
+    },
+    "wrist": {
+      "enabled": true,
+      "model": "virtual_pinhole",
+      "calibration_source_serial": "virtual-bimanual-placeholder",
+      "mount": "unused_in_bimanual_visual_preview",
+      "nominal_vertical_fov_deg": 48.0,
+      "stream": {
+        "width": 640,
+        "height": 480,
+        "source_fps": 30,
+        "format": "rgb8"
+      },
+      "intrinsics": null,
+      "distortion": null
+    }
+  },
+  "engine_overrides": {
+    "isaac_sim": {
+      "base": {
+        "eye_world_m": [
+          2.1,
+          -2.35,
+          2.15
+        ],
+        "target_world_m": [
+          0.55,
+          0.02,
+          1.1
+        ],
+        "nominal_vertical_fov_deg": 48.0
+      },
+      "top": {
+        "eye_world_m": [
+          0.55,
+          0.0,
+          2.85
+        ],
+        "target_world_m": [
+          0.55,
+          0.0,
+          0.92
+        ],
+        "nominal_vertical_fov_deg": 50.0,
+        "virtual_auxiliary": true,
+        "role": "full bimanual work-surface overview"
+      },
+      "left": {
+        "eye_world_m": [
+          1.55,
+          -2.1,
+          1.85
+        ],
+        "target_world_m": [
+          0.55,
+          0.0,
+          1.08
+        ],
+        "nominal_vertical_fov_deg": 50.0,
+        "virtual_auxiliary": true,
+        "role": "left oblique bimanual view"
+      },
+      "right": {
+        "eye_world_m": [
+          1.55,
+          2.1,
+          1.85
+        ],
+        "target_world_m": [
+          0.55,
+          0.0,
+          1.08
+        ],
+        "nominal_vertical_fov_deg": 50.0,
+        "virtual_auxiliary": true,
+        "role": "right oblique bimanual view"
+      },
+      "side": {
+        "eye_world_m": [
+          0.55,
+          -2.35,
+          1.75
+        ],
+        "target_world_m": [
+          0.55,
+          0.0,
+          1.08
+        ],
+        "nominal_vertical_fov_deg": 55.0
+      },
+      "wrist": {
+        "parent_prim": "/World/Franka/panda_hand",
+        "prim_path": "/World/Franka/panda_hand/wrist_cam",
+        "position_parent_m": [
+          0.13,
+          0.0,
+          -0.19
+        ],
+        "rotation_parent_xyzw": [
+          0.03701,
+          0.03701,
+          -0.70614,
+          -0.70614
+        ],
+        "convention": "ros"
+      },
+      "imaging": {
+        "photometric_match_level": "virtual_fixed_exposure",
+        "film_iso": 100.0,
+        "camera_shutter_reciprocal_s": 100.0,
+        "f_number": 1.4,
+        "white_balance_k": 5622,
+        "tone_mapping": "isaac_rtx_photographic"
+      }
+    }
+  }
+}

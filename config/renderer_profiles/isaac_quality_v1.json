@@ -1,0 +1,14 @@
+{
+  "format": "robot_data_renderer_profile",
+  "format_version": 1,
+  "profile_version": 1,
+  "id": "isaac_quality_v1",
+  "label": "Isaac Quality",
+  "description": "使用 Isaac Lab quality 模式；场景资产和材质不变，因此不等同于照片级真实性。",
+  "engine_id": "isaac_sim",
+  "rendering_mode": "quality",
+  "kit_settings": {
+    "/UJITSO/geometry": false,
+    "/persistent/UJITSO/geometry": false
+  }
+}

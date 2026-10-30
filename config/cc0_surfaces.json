@@ -1,0 +1,49 @@
+{
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "resolution": 1024,
+  "materials": [
+    {
+      "id": "Wood049",
+      "name": "ambientCG Wood049",
+      "category": "tabletop",
+      "source_url": "https://ambientcg.com/view?id=Wood049",
+      "download_url": "https://ambientcg.com/get?file=Wood049_1K-PNG.zip"
+    },
+    {
+      "id": "Wood051",
+      "name": "ambientCG Wood051",
+      "category": "tabletop",
+      "source_url": "https://ambientcg.com/view?id=Wood051",
+      "download_url": "https://ambientcg.com/get?file=Wood051_1K-PNG.zip"
+    },
+    {
+      "id": "Marble006",
+      "name": "ambientCG Marble006",
+      "category": "tabletop",
+      "source_url": "https://ambientcg.com/view?id=Marble006",
+      "download_url": "https://ambientcg.com/get?file=Marble006_1K-PNG.zip"
+    },
+    {
+      "id": "Concrete033",
+      "name": "ambientCG Concrete033",
+      "category": "background",
+      "source_url": "https://ambientcg.com/view?id=Concrete033",
+      "download_url": "https://ambientcg.com/get?file=Concrete033_1K-PNG.zip"
+    },
+    {
+      "id": "PaintedPlaster017",
+      "name": "ambientCG PaintedPlaster017",
+      "category": "background",
+      "source_url": "https://ambientcg.com/view?id=PaintedPlaster017",
+      "download_url": "https://ambientcg.com/get?file=PaintedPlaster017_1K-PNG.zip"
+    },
+    {
+      "id": "Plaster001",
+      "name": "ambientCG Plaster001",
+      "category": "background",
+      "source_url": "https://ambientcg.com/view?id=Plaster001",
+      "download_url": "https://ambientcg.com/get?file=Plaster001_1K-PNG.zip"
+    }
+  ]
+}

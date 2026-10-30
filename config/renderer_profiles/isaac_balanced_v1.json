@@ -1,0 +1,14 @@
+{
+  "format": "robot_data_renderer_profile",
+  "format_version": 1,
+  "profile_version": 1,
+  "id": "isaac_balanced_v1",
+  "label": "Isaac Balanced",
+  "description": "兼顾交互与画质；保持历史 Studio Isaac 会话的默认行为。",
+  "engine_id": "isaac_sim",
+  "rendering_mode": "balanced",
+  "kit_settings": {
+    "/UJITSO/geometry": false,
+    "/persistent/UJITSO/geometry": false
+  }
+}

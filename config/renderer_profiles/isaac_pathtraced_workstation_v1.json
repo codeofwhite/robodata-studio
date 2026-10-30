@@ -1,0 +1,23 @@
+{
+  "format": "robot_data_renderer_profile",
+  "format_version": 1,
+  "profile_version": 1,
+  "id": "isaac_pathtraced_workstation_v1",
+  "label": "Isaac Path-Traced Workstation v1",
+  "description": "Offline visual-fidelity preview using Path Tracing, 32 spp, six light bounces, OptiX denoising, and fixed photographic exposure. The Isaac Lab quality mode is only the required launcher compatibility mode.",
+  "engine_id": "isaac_sim",
+  "rendering_mode": "quality",
+  "kit_settings": {
+    "/UJITSO/geometry": false,
+    "/persistent/UJITSO/geometry": false,
+    "/rtx/rendermode": "PathTracing",
+    "/rtx/pathtracing/spp": 32,
+    "/rtx/pathtracing/maxBounces": 6,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 6,
+    "/rtx/pathtracing/optixDenoiser/enabled": true,
+    "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/cameraShutter": 100.0,
+    "/rtx/post/tonemap/fNumber": 1.4
+  }
+}

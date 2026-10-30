@@ -1,0 +1,26 @@
+{
+  "format": "robot_data_renderer_profile",
+  "format_version": 1,
+  "profile_version": 3,
+  "id": "isaac_pathtraced_workstation_v3",
+  "label": "Isaac Path-Traced Workstation v3",
+  "description": "Offline path-traced visual-fidelity preview with USD-synchronized articulated transforms, 32 spp, six light bounces, OptiX denoising, and fixed photographic exposure.",
+  "engine_id": "isaac_sim",
+  "rendering_mode": "quality",
+  "kit_settings": {
+    "/app/useFabricSceneDelegate": false,
+    "/rtx/hydra/supportMultiTickRate": false,
+    "/rtx/hydra/readTransformsFromFabricInRenderDelegate": false,
+    "/UJITSO/geometry": false,
+    "/persistent/UJITSO/geometry": false,
+    "/rtx/rendermode": "PathTracing",
+    "/rtx/pathtracing/spp": 32,
+    "/rtx/pathtracing/maxBounces": 6,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 6,
+    "/rtx/pathtracing/optixDenoiser/enabled": true,
+    "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/cameraShutter": 100.0,
+    "/rtx/post/tonemap/fNumber": 1.4
+  }
+}

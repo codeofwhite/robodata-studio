@@ -1,0 +1,14 @@
+{
+  "format": "robot_data_renderer_profile",
+  "format_version": 1,
+  "profile_version": 1,
+  "id": "isaac_performance_v1",
+  "label": "Isaac Performance",
+  "description": "优先交互帧率；用于遥操作和运行链路调试，不代表高视觉真实性。",
+  "engine_id": "isaac_sim",
+  "rendering_mode": "performance",
+  "kit_settings": {
+    "/UJITSO/geometry": false,
+    "/persistent/UJITSO/geometry": false
+  }
+}

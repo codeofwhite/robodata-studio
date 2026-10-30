@@ -1,0 +1,159 @@
+{
+  "format": "robot_data_studio_camera_profile",
+  "format_version": 1,
+  "id": "lab_d435i_dual_v1",
+  "label": "实验室双 Intel RealSense D435i",
+  "match_level": "nominal_pending_intrinsics",
+  "dataset_fps_default": 10,
+  "roles": {
+    "agentview": {
+      "enabled": true,
+      "model": "Intel RealSense D435i",
+      "calibration_source_serial": null,
+      "mount": "fixed_main",
+      "nominal_vertical_fov_deg": 42.0,
+      "stream": {
+        "width": 640,
+        "height": 480,
+        "source_fps": 30,
+        "format": "rgb8"
+      },
+      "intrinsics": null,
+      "distortion": null
+    },
+    "wrist": {
+      "enabled": true,
+      "model": "Intel RealSense D435i",
+      "calibration_source_serial": null,
+      "mount": "franka_hand",
+      "nominal_vertical_fov_deg": 42.0,
+      "stream": {
+        "width": 640,
+        "height": 480,
+        "source_fps": 30,
+        "format": "rgb8"
+      },
+      "intrinsics": null,
+      "distortion": null
+    }
+  },
+  "inventory": [
+    {
+      "serial": null,
+      "model": "Intel RealSense D435i",
+      "role": "agentview",
+      "active": true
+    },
+    {
+      "serial": null,
+      "model": "Intel RealSense D435i",
+      "role": "wrist",
+      "active": true
+    },
+    {
+      "serial": null,
+      "model": "Intel RealSense D435i",
+      "role": "historical_wrist",
+      "active": false
+    }
+  ],
+  "engine_overrides": {
+    "genesis": {
+      "base": {
+        "position_world_m": [
+          1.55,
+          -1.55,
+          1.25
+        ],
+        "lookat_world_m": [
+          0.34,
+          -0.02,
+          0.54
+        ],
+        "vertical_fov_deg": 42.0
+      },
+      "wrist": {
+        "parent_link": "hand",
+        "position_parent_m": [
+          0.1,
+          0.0,
+          -0.03
+        ],
+        "lookat_parent_m": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "up_parent": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "vertical_fov_deg": 42.0
+      }
+    },
+    "isaac_sim": {
+      "base": {
+        "eye_world_m": [
+          2.2,
+          1.6,
+          1.7
+        ],
+        "target_world_m": [
+          0.45,
+          0.0,
+          0.65
+        ]
+      },
+      "top": {
+        "eye_world_m": [
+          0.45,
+          0.0,
+          2.4
+        ],
+        "target_world_m": [
+          0.45,
+          0.0,
+          0.45
+        ],
+        "nominal_vertical_fov_deg": 52.0,
+        "virtual_auxiliary": true,
+        "role": "top-down XY alignment"
+      },
+      "side": {
+        "eye_world_m": [
+          0.45,
+          1.8,
+          1.0
+        ],
+        "target_world_m": [
+          0.45,
+          0.0,
+          0.55
+        ],
+        "nominal_vertical_fov_deg": 55.0,
+        "virtual_auxiliary": true,
+        "role": "side-view height and contact"
+      },
+      "wrist": {
+        "parent_prim": "/World/Franka/panda_hand",
+        "prim_path": "/World/Franka/panda_hand/wrist_cam",
+        "position_parent_m": [
+          0.13,
+          0.0,
+          -0.19
+        ],
+        "rotation_parent_xyzw": [
+          0.03701,
+          0.03701,
+          -0.70614,
+          -0.70614
+        ],
+        "convention": "ros",
+        "reference": "IsaacLab stack_ik_rel_visuomotor_env_cfg.py",
+        "reference_revision": "28a37cecdd433c22d9eabd6a5954add9f13a8951",
+        "tuning_note": "Lowered 0.04 m along panda_hand z to keep the gripper visible"
+      }
+    }
+  }
+}

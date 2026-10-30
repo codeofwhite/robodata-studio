@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+checkpoints/
+data/
+web_console/node_modules/
+*.etli
+*.egg-info/
+
+# Private credentials and machine-local environment files
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+.secrets/
+credentials/

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Data Studio · Isaac Sim Teleoperation</title>
+  </head>
+  <body>
+    <main class="console-shell">
+      <section class="viewport-panel" aria-label="Isaac Sim video">
+        <header class="top-bar">
+          <div>
+            <strong>Browser Teleoperation Console</strong>
+            <span class="engine-badge">Isaac Sim</span>
+            <span id="active-view-label" class="active-view-label">Main: Free</span>
+          </div>
+          <span id="stream-status" class="status status-connecting">Connecting</span>
+        </header>
+        <div id="stream-surface" class="stream-surface">
+          <div id="main-div" class="stream-frame" hidden>
+            <div id="aspect-ratio-div" tabindex="0">
+              <video id="remote-video" muted autoplay playsinline></video>
+              <audio id="remote-audio" muted></audio>
+            </div>
+          </div>
+          <div id="stream-overlay" class="stream-overlay">
+            <strong id="stream-message">Connecting to Isaac Sim WebRTC…</strong>
+            <span id="stream-detail">Waiting for runtime configuration.</span>
+          </div>
+        </div>
+        <section class="sensor-preview-strip" aria-label="Recorded camera previews">
+          <article class="sensor-preview-card" data-preview-camera="base" role="button" tabindex="0" aria-label="Show base camera in main WebRTC view">
+            <header>
+              <span><strong>Base</strong> · recorded</span>
+              <span id="base-preview-status" class="preview-status preview-waiting">WAITING</span>
+            </header>
+            <div class="sensor-preview-surface">
+              <img id="base-preview-image" alt="Isaac Sim base recording camera" hidden />
+              <span id="base-preview-overlay">Waiting for camera frame…</span>
+            </div>
+            <footer>
+              <span id="base-preview-frame">Frame –</span>
+              <span id="base-preview-age">Age –</span>
+            </footer>
+          </article>
+          <article class="sensor-preview-card" data-preview-camera="top" role="button" tabindex="0" aria-label="Show top camera in main WebRTC view">
+            <header>
+              <span><strong>Top</strong> · recorded</span>
+              <span id="top-preview-status" class="preview-status preview-waiting">WAITING</span>
+            </header>
+            <div class="sensor-preview-surface">
+              <img id="top-preview-image" alt="Isaac Sim top recording camera" hidden />
+              <span id="top-preview-overlay">Waiting for camera frame…</span>
+            </div>
+            <footer>
+              <span id="top-preview-frame">Frame –</span>
+              <span id="top-preview-age">Age –</span>
+            </footer>
+          </article>
+          <article class="sensor-preview-card" data-preview-camera="side" role="button" tabindex="0" aria-label="Show side camera in main WebRTC view">
+            <header>
+              <span><strong>Side</strong> · recorded</span>
+              <span id="side-preview-status" class="preview-status preview-waiting">WAITING</span>
+            </header>
+            <div class="sensor-preview-surface">
+              <img id="side-preview-image" alt="Isaac Sim side recording camera" hidden />
+              <span id="side-preview-overlay">Waiting for camera frame…</span>
+            </div>
+            <footer>
+              <span id="side-preview-frame">Frame –</span>
+              <span id="side-preview-age">Age –</span>
+            </footer>
+          </article>
+          <article class="sensor-preview-card" data-preview-camera="wrist" role="button" tabindex="0" aria-label="Show wrist camera in main WebRTC view">
+            <header>
+              <span><strong>Wrist</strong> · recorded</span>
+              <span id="wrist-preview-status" class="preview-status preview-waiting">WAITING</span>
+            </header>
+            <div class="sensor-preview-surface">
+              <img id="wrist-preview-image" alt="Isaac Sim wrist recording camera" hidden />
+              <span id="wrist-preview-overlay">Waiting for camera frame…</span>
+            </div>
+            <footer>
+              <span id="wrist-preview-frame">Frame –</span>
+              <span id="wrist-preview-age">Age –</span>
+            </footer>
+          </article>
+        </section>
+        <footer class="video-footer">
+          <span id="stream-endpoint">WebRTC: waiting</span>
+          <span>Views: 0 Free · 1 Base · 2 Top · 3 Side · 4 Wrist</span>
+          <span id="video-dimensions">Video: 0×0</span>
+        </footer>
+      </section>
+
+      <aside class="control-panel" aria-label="Isaac Sim teleoperation controls">
+        <section class="panel-section" data-control-source="gello">
+          <h1>GELLO → Franka</h1>
+          <p>Direct 7-DOF joint targets with independent gripper control.</p>
+          <div class="button-row">
+            <button id="serial-connect">Connect GELLO</button>
+            <button id="serial-disconnect" disabled>Disconnect</button>
+          </div>
+          <div id="serial-status" class="status-text">Web Serial idle — use desktop Chrome/Edge on localhost.</div>
+        </section>
+
+        <section class="panel-section" data-control-source="gello">
+          <h2>Calibration</h2>
+          <div class="button-grid">
+            <button id="capture-home" disabled>Capture arm home</button>
+            <button id="capture-open" disabled>Capture gripper open</button>
+            <button id="capture-closed" disabled>Capture gripper closed</button>
+          </div>
+          <div class="directions">
+            <label>J1 <select data-direction><option value="1">+1</option><option value="-1">−1</option></select></label>
+            <label>J2 <select data-direction><option value="1">+1</option><option value="-1">−1</option></select></label>
+            <label>J3 <select data-direction><option value="1">+1</option><option value="-1">−1</option></select></label>
+            <label>J4 <select data-direction><option value="1">+1</option><option value="-1">−1</option></select></label>
+            <label>J5 <select data-direction><option value="1">+1</option><option value="-1">−1</option></select></label>
+            <label>J6 <select data-direction><option value="1">+1</option><option value="-1">−1</option></select></label>
+            <label>J7 <select data-direction><option value="1">+1</option><option value="-1">−1</option></select></label>
+          </div>
+          <label class="enable-row"><input id="enable-control" type="checkbox" disabled /> Enable control</label>
+          <div id="raw" class="raw-values">Raw ID 1–8: waiting</div>
+        </section>
+
+        <section id="right-gello-panel" class="panel-section" data-control-source="gello" hidden>
+          <h2>Right GELLO</h2>
+          <p>Select the second USB explicitly. Both arms hold when either stream expires.</p>
+          <div class="button-row"><button id="right-connect">Connect right USB</button><button id="right-disconnect">Disconnect right</button></div>
+          <div class="button-grid"><button id="right-home">Capture right robot home</button><button id="right-open">Capture right gripper open</button><button id="right-closed">Capture right gripper closed</button></div>
+          <div class="directions"><label>J1 <select data-right-direction><option value="1">+1</option><option value="-1">−1</option></select></label><label>J2 <select data-right-direction><option value="1">+1</option><option value="-1">−1</option></select></label><label>J3 <select data-right-direction><option value="1">+1</option><option value="-1">−1</option></select></label><label>J4 <select data-right-direction><option value="1">+1</option><option value="-1">−1</option></select></label><label>J5 <select data-right-direction><option value="1">+1</option><option value="-1">−1</option></select></label><label>J6 <select data-right-direction><option value="1">+1</option><option value="-1">−1</option></select></label><label>J7 <select data-right-direction><option value="1">+1</option><option value="-1">−1</option></select></label></div>
+          <div id="right-status" class="status-text">Right USB disconnected. Default57600 baud /20Hz; no EEPROM writes.</div>
+        </section>
+
+        <section class="panel-section" data-control-source="keyboard" hidden>
+          <h1>Keyboard → Franka</h1>
+          <p>Isaac Lab Se3Keyboard semantics: relative end-effector pose through damped least-squares IK.</p>
+          <div class="keyboard-grid" aria-label="Isaac Lab keyboard map">
+            <div><kbd>W / S</kbd><span>X translation</span></div>
+            <div><kbd>A / D</kbd><span>Y translation</span></div>
+            <div><kbd>Q / E</kbd><span>Z translation</span></div>
+            <div><kbd>Z / X</kbd><span>Roll</span></div>
+            <div><kbd>T / G</kbd><span>Pitch</span></div>
+            <div><kbd>C / V</kbd><span>Yaw</span></div>
+            <div><kbd>K</kbd><span>Toggle gripper</span></div>
+            <div><kbd>L</kbd><span>Reset command</span></div>
+          </div>
+          <div id="arm-switch-help" hidden><kbd>Tab</kbd> 切换主力臂 · 当前：<strong id="active-arm">LEFT</strong> · 另一臂保持</div>
+          <div id="keyboard-status" class="status-text warning">Click outside a form field to enable keyboard control.</div>
+        </section>
+
+        <section class="panel-section telemetry-section">
+          <h2>Episode recording</h2>
+          <label class="task-field">
+            Task instruction
+            <input id="episode-task" value="Move the Franka safely" />
+          </label>
+          <div class="button-grid">
+            <button id="record-start">Start Episode</button>
+            <button id="record-success" disabled>Save Success</button>
+            <button id="record-failure" disabled>Save Failure</button>
+            <button id="record-discard" disabled>Discard</button>
+            <button id="environment-reset">Reset</button>
+          </div>
+          <div id="recording-status" class="status-text">Recording: idle</div>
+        </section>
+
+        <section class="panel-section telemetry-section">
+          <h2>Runtime status</h2>
+          <div id="sim-status" class="status-text">Simulator WebSocket: connecting…</div>
+          <div id="telemetry" class="status-text">Telemetry: waiting</div>
+        </section>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

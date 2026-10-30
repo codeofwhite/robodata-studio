@@ -1,0 +1,67 @@
+{
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "resolution": 1024,
+  "materials": [
+    {
+      "id": "Fabric030",
+      "name": "ambientCG Fabric 030",
+      "source_url": "https://ambientcg.com/view?id=Fabric030",
+      "download_url": "https://ambientcg.com/get?file=Fabric030_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric031",
+      "name": "ambientCG Fabric 031",
+      "source_url": "https://ambientcg.com/view?id=Fabric031",
+      "download_url": "https://ambientcg.com/get?file=Fabric031_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric032",
+      "name": "ambientCG Fabric 032",
+      "source_url": "https://ambientcg.com/view?id=Fabric032",
+      "download_url": "https://ambientcg.com/get?file=Fabric032_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric033",
+      "name": "ambientCG Fabric 033",
+      "source_url": "https://ambientcg.com/view?id=Fabric033",
+      "download_url": "https://ambientcg.com/get?file=Fabric033_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric034",
+      "name": "ambientCG Fabric 034",
+      "source_url": "https://ambientcg.com/view?id=Fabric034",
+      "download_url": "https://ambientcg.com/get?file=Fabric034_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric035",
+      "name": "ambientCG Fabric 035",
+      "source_url": "https://ambientcg.com/view?id=Fabric035",
+      "download_url": "https://ambientcg.com/get?file=Fabric035_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric036",
+      "name": "ambientCG Fabric 036",
+      "source_url": "https://ambientcg.com/view?id=Fabric036",
+      "download_url": "https://ambientcg.com/get?file=Fabric036_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric037",
+      "name": "ambientCG Fabric 037",
+      "source_url": "https://ambientcg.com/view?id=Fabric037",
+      "download_url": "https://ambientcg.com/get?file=Fabric037_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric038",
+      "name": "ambientCG Fabric 038",
+      "source_url": "https://ambientcg.com/view?id=Fabric038",
+      "download_url": "https://ambientcg.com/get?file=Fabric038_1K-PNG.zip"
+    },
+    {
+      "id": "Fabric039",
+      "name": "ambientCG Fabric 039",
+      "source_url": "https://ambientcg.com/view?id=Fabric039",
+      "download_url": "https://ambientcg.com/get?file=Fabric039_1K-PNG.zip"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+license = {text = "Apache-2.0"}
+name = "robot-data-contracts"
+version = "0.2.0"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pydantic>=2.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["robot_data_contracts*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.data-files]
+"share/robot-data-contracts/legal" = ["../../LICENSE", "../../NOTICE", "../../THIRD_PARTY_NOTICES.md"]

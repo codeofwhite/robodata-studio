@@ -1,0 +1,28 @@
+RoboData Studio
+Copyright 2026 RoboData Studio contributors.
+
+The original project code that its contributors are authorized to license is
+provided under the Apache License, Version 2.0. See LICENSE.
+
+This repository also contains or references third-party material. Existing
+copyright notices and licenses for that material remain applicable; the project
+license does not replace them. See THIRD_PARTY_NOTICES.md for identified material,
+external assets, and unresolved redistribution questions.
+
+The bundled GELLO source was imported from codeofwhite/gello-remote at commit
+b751a20e58f373e5415de511573fcff7225061be. The integration preserves the existing
+control protocol, safety logic, and worker implementations. Integration changes
+to packaging, resource paths, descriptors, and tests are documented in the
+repository's release and reproduction records.
+
+teleop/web_console/src/main.ts retains the following upstream identification:
+Copyright (c) 2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: MIT
+
+That source-file identification does not determine the license of the separately
+imported NVIDIA WebRTC streaming library or of the combined compiled bundle.
+NVIDIA, Franka, and other third-party names identify their respective products
+or sources and do not imply sponsorship or endorsement of this project.
+
+This NOTICE supplies attribution information and does not modify LICENSE or
+grant additional rights to third-party material.

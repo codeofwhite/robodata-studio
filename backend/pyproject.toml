@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+license = {text = "Apache-2.0"}
+name = "robot-data-studio-backend"
+version = "0.1.0"
+description = "Local control plane for robot data collection, QA, and exports."
+requires-python = ">=3.12"
+dependencies = [
+  "robot-data-contracts==0.2.0",
+  "gello-remote==0.1.0",
+  "fastapi>=0.116,<1",
+  "uvicorn[standard]>=0.35,<1",
+  "pydantic>=2.11,<3",
+  "numpy>=2,<3",
+  "python-multipart==0.0.32",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "httpx>=0.28,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Keep the source files authoritative; wheel installation copies these resources
+# beneath the target environment's data prefix, independently of site-packages.
+[tool.setuptools.data-files]
+"share/robot-data-studio/legal" = ["../LICENSE", "../NOTICE", "../THIRD_PARTY_NOTICES.md"]
+"share/robot-data-studio/migrations" = ["migrations/*.sql"]
+"share/robot-data-studio/camera_profiles" = ["../config/camera_profiles/*.json"]
+"share/robot-data-studio/renderer_profiles" = ["../config/renderer_profiles/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

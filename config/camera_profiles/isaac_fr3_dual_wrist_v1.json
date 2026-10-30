@@ -1,0 +1,127 @@
+{
+  "format": "robot_data_studio_camera_profile",
+  "format_version": 1,
+  "id": "isaac_fr3_dual_wrist_v1",
+  "label": "双 FR3 · 主视角＋真实双腕保存／俯视预览",
+  "match_level": "nominal_pending_intrinsics",
+  "dataset_fps_default": 10,
+  "roles": {
+    "agentview": {
+      "enabled": true,
+      "model": "virtual_pinhole",
+      "calibration_source_serial": "virtual-bimanual-agentview",
+      "mount": "fixed_external",
+      "nominal_vertical_fov_deg": 48.0,
+      "stream": {
+        "width": 960,
+        "height": 720,
+        "source_fps": 30,
+        "format": "rgb8"
+      },
+      "intrinsics": null,
+      "distortion": null
+    },
+    "wrist": {
+      "enabled": true,
+      "model": "virtual_pinhole",
+      "calibration_source_serial": "virtual-fr3-wrist-nominal",
+      "mount": "fr3_hand",
+      "nominal_vertical_fov_deg": 48.0,
+      "stream": {
+        "width": 960,
+        "height": 720,
+        "source_fps": 30,
+        "format": "rgb8"
+      },
+      "intrinsics": null,
+      "distortion": null
+    }
+  },
+  "engine_overrides": {
+    "isaac_sim": {
+      "base": {
+        "eye_world_m": [
+          0.55,
+          -2.35,
+          1.65
+        ],
+        "target_world_m": [
+          0.55,
+          0.02,
+          1.03
+        ],
+        "nominal_vertical_fov_deg": 44
+      },
+      "top": {
+        "eye_world_m": [
+          0.55,
+          0.37,
+          2.02
+        ],
+        "target_world_m": [
+          0.55,
+          -0.06,
+          0.78
+        ],
+        "nominal_vertical_fov_deg": 45,
+        "virtual_auxiliary": true,
+        "role": "full bimanual work-surface overview"
+      },
+      "side": {
+        "arm": "left",
+        "parent_link": "fr3_hand",
+        "position_parent_m": [
+          0.08,
+          0,
+          0.02
+        ],
+        "rotation_parent_xyzw": [
+          0,
+          -0.229753,
+          0,
+          0.973249
+        ],
+        "convention": "ros",
+        "nominal_vertical_fov_deg": 70,
+        "pose_source": "LeHome FR3 nominal mount; wxyz converted to xyzw; unvalidated in this scene"
+      },
+      "wrist": {
+        "arm": "right",
+        "parent_link": "fr3_hand",
+        "position_parent_m": [
+          0.08,
+          0,
+          0.02
+        ],
+        "rotation_parent_xyzw": [
+          0,
+          -0.229753,
+          0,
+          0.973249
+        ],
+        "convention": "ros",
+        "nominal_vertical_fov_deg": 70,
+        "pose_source": "LeHome FR3 nominal mount; wxyz converted to xyzw; unvalidated in this scene"
+      },
+      "imaging": {
+        "photometric_match_level": "virtual_fixed_exposure",
+        "film_iso": 100.0,
+        "camera_shutter_reciprocal_s": 100.0,
+        "f_number": 1.4,
+        "white_balance_k": 5622,
+        "tone_mapping": "isaac_rtx_photographic"
+      },
+      "recording_camera_map": {
+        "main": "base",
+        "left_wrist": "side",
+        "right_wrist": "wrist"
+      },
+      "preview_labels": {
+        "base": "Main",
+        "top": "Top · preview only",
+        "side": "Left wrist",
+        "wrist": "Right wrist"
+      }
+    }
+  }
+}

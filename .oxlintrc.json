@@ -1,0 +1,11 @@
+{
+  "ignorePatterns": ["components/ui/**", "hooks/**"],
+  "rules": {
+    "nextjs/no-html-link-for-pages": "off",
+    "nextjs/no-img-element": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/react-compiler": "off"
+  }
+}
