@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 880" width="1440" height="880" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1440" height="880" fill="#091725"/>
+  <defs>
+    <marker id="arrow-default" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#555555"/>
+    </marker>
+    <marker id="arrow-c0" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-c1" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#10B981"/>
+    </marker>
+    <marker id="arrow-c2" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#7C3AED"/>
+    </marker>
+    <marker id="arrow-c3" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#EA580C"/>
+    </marker>
+    <marker id="arrow-c4" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#C62828"/>
+    </marker>
+    <marker id="arrow-c5" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#0D47A1"/>
+    </marker>
+    <marker id="arrow-c6" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#1B5E20"/>
+    </marker>
+    <marker id="arrow-c7" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#4A148C"/>
+    </marker>
+    <marker id="arrow-c8" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#BF360C"/>
+    </marker>
+    <marker id="arrow-c9" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#37474F"/>
+    </marker>
+  </defs>
+  <path d="M 400.0,200.0 L 555.0,200.0" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 885.0,200.0 L 1040.0,200.0" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 720.0,252.5 L 720.0,367.5" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 400.0,420.0 L 555.0,420.0" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 885.0,420.0 L 1030.0,420.0" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 720.0,472.5 L 720.0,587.5" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <path d="M 400.0,640.0 L 555.0,640.0" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)" stroke-dasharray="8,4"/>
+  <path d="M 885.0,640.0 L 1030.0,640.0" stroke="#69CEBD" stroke-width="2" fill="none" marker-end="url(#arrow-default)"/>
+  <rect x="70.0" y="147.5" width="330.0" height="105.0" fill="#142839" stroke="#47657B" stroke-width="2" rx="8"/>
+  <text x="235.0" y="196.2" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">STUDIO UI</text>
+  <text x="235.0" y="217.2" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Sessions · review · exports</text>
+  <rect x="555.0" y="147.5" width="330.0" height="105.0" fill="#113D40" stroke="#69CEBD" stroke-width="2" rx="8"/>
+  <text x="720.0" y="196.2" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">STUDIO API</text>
+  <text x="720.0" y="217.2" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Jobs · QA · worker lifecycle</text>
+  <rect x="1040.0" y="147.5" width="330.0" height="105.0" fill="#142839" stroke="#47657B" stroke-width="2" rx="8"/>
+  <text x="1205.0" y="196.2" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">SQLITE INDEX</text>
+  <text x="1205.0" y="217.2" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Status · QA · resource locks</text>
+  <rect x="70.0" y="367.5" width="330.0" height="105.0" fill="#142839" stroke="#47657B" stroke-width="2" rx="8"/>
+  <text x="235.0" y="416.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">INPUT CLIENTS</text>
+  <text x="235.0" y="437.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Keyboard / GELLO protocol</text>
+  <rect x="555.0" y="367.5" width="330.0" height="105.0" fill="#113D40" stroke="#69CEBD" stroke-width="2" rx="8"/>
+  <text x="720.0" y="416.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">GELLO REMOTE WORKER</text>
+  <text x="720.0" y="437.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Safety · control · recording</text>
+  <rect x="1030.0" y="367.5" width="350.0" height="105.0" fill="#142839" stroke="#47657B" stroke-width="2" rx="8"/>
+  <text x="1205.0" y="416.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">SIMULATOR ENVIRONMENT</text>
+  <text x="1205.0" y="437.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Isaac Lab / Sim · Panda · PhysX</text>
+  <rect x="70.0" y="587.5" width="330.0" height="105.0" fill="#142839" stroke="#47657B" stroke-width="2" rx="8"/>
+  <text x="235.0" y="636.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">SHARED CONTRACTS</text>
+  <text x="235.0" y="657.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Schemas · reader · writer</text>
+  <rect x="555.0" y="587.5" width="330.0" height="105.0" fill="#113D40" stroke="#69CEBD" stroke-width="2" rx="8"/>
+  <text x="720.0" y="636.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">CANONICAL EPISODE v1</text>
+  <text x="720.0" y="657.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">Manifest · trajectory · images</text>
+  <rect x="1030.0" y="587.5" width="350.0" height="105.0" fill="#142839" stroke="#47657B" stroke-width="2" rx="8"/>
+  <text x="1205.0" y="636.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">EXPORT ENVIRONMENT</text>
+  <text x="1205.0" y="657.1" font-size="19" fill="#E7F1F6" text-anchor="middle" font-weight="bold">LeRobot dataset + provenance</text>
+  <text x="60.0" y="55.0" font-size="29" fill="#E7F1F6" text-anchor="start">SYSTEM ARCHITECTURE</text>
+  <text x="1380.0" y="55.0" font-size="20" fill="#69CEBD" text-anchor="end">by IPPLab</text>
+  <text x="60.0" y="95.0" font-size="20" fill="#9CB3C5" text-anchor="start">Separate processes and Python environments, connected by versioned interfaces.</text>
+  <text x="477.0" y="184.0" font-size="17" fill="#69CEBD" text-anchor="middle">HTTP</text>
+  <text x="962.0" y="184.0" font-size="17" fill="#69CEBD" text-anchor="middle">Index + jobs</text>
+  <text x="741.0" y="311.0" font-size="17" fill="#69CEBD" text-anchor="start">Launch / monitor</text>
+  <text x="477.0" y="405.0" font-size="17" fill="#69CEBD" text-anchor="middle">WebSocket</text>
+  <text x="962.0" y="405.0" font-size="17" fill="#69CEBD" text-anchor="middle">Simulator I/O</text>
+  <text x="741.0" y="530.0" font-size="17" fill="#69CEBD" text-anchor="start">Write record</text>
+  <text x="477.0" y="624.0" font-size="17" fill="#69CEBD" text-anchor="middle">Defines format</text>
+  <text x="962.0" y="624.0" font-size="17" fill="#69CEBD" text-anchor="middle">QA-accepted</text>
+  <text x="60.0" y="757.0" font-size="18" fill="#9CB3C5" text-anchor="start">SOLID  Runtime / data flow      DASHED  Schema dependency</text>
+  <text x="60.0" y="800.0" font-size="18" fill="#9CB3C5" text-anchor="start">The API orchestrates workers; each worker owns its control loop. Contracts have no SDK or database dependency.</text>
+  <text x="60.0" y="833.0" font-size="18" fill="#9CB3C5" text-anchor="start">SDKs, robot assets and the optional WebRTC console are configured separately. No training job is launched by export.</text>
+</svg>

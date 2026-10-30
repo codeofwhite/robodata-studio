@@ -1,0 +1,303 @@
+{
+  "title": "RoboData Studio process and data boundaries",
+  "canvas": {
+    "width": 1440,
+    "height": 880
+  },
+  "style": {
+    "font_family": "Arial, Helvetica, sans-serif",
+    "font_size": 19,
+    "bg_color": "#091725"
+  },
+  "nodes": [
+    {
+      "id": "ui",
+      "label": "STUDIO UI\nSessions · review · exports",
+      "x": 235,
+      "y": 200,
+      "width": 330,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#142839",
+      "stroke": "#47657B",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "api",
+      "label": "STUDIO API\nJobs · QA · worker lifecycle",
+      "x": 720,
+      "y": 200,
+      "width": 330,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#113D40",
+      "stroke": "#69CEBD",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "index",
+      "label": "SQLITE INDEX\nStatus · QA · resource locks",
+      "x": 1205,
+      "y": 200,
+      "width": 330,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#142839",
+      "stroke": "#47657B",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "input",
+      "label": "INPUT CLIENTS\nKeyboard / GELLO protocol",
+      "x": 235,
+      "y": 420,
+      "width": 330,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#142839",
+      "stroke": "#47657B",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "worker",
+      "label": "GELLO REMOTE WORKER\nSafety · control · recording",
+      "x": 720,
+      "y": 420,
+      "width": 330,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#113D40",
+      "stroke": "#69CEBD",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "sdk",
+      "label": "SIMULATOR ENVIRONMENT\nIsaac Lab / Sim · Panda · PhysX",
+      "x": 1205,
+      "y": 420,
+      "width": 350,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#142839",
+      "stroke": "#47657B",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "contracts",
+      "label": "SHARED CONTRACTS\nSchemas · reader · writer",
+      "x": 235,
+      "y": 640,
+      "width": 330,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#142839",
+      "stroke": "#47657B",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "episode",
+      "label": "CANONICAL EPISODE v1\nManifest · trajectory · images",
+      "x": 720,
+      "y": 640,
+      "width": 330,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#113D40",
+      "stroke": "#69CEBD",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    },
+    {
+      "id": "export",
+      "label": "EXPORT ENVIRONMENT\nLeRobot dataset + provenance",
+      "x": 1205,
+      "y": 640,
+      "width": 350,
+      "height": 105,
+      "shape": "rounded",
+      "fill": "#142839",
+      "stroke": "#47657B",
+      "text_color": "#E7F1F6",
+      "font_size": 19
+    }
+  ],
+  "edges": [
+    {
+      "from": "ui",
+      "to": "api",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "solid"
+    },
+    {
+      "from": "api",
+      "to": "index",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "solid"
+    },
+    {
+      "from": "api",
+      "to": "worker",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "solid"
+    },
+    {
+      "from": "input",
+      "to": "worker",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "solid"
+    },
+    {
+      "from": "worker",
+      "to": "sdk",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "solid"
+    },
+    {
+      "from": "worker",
+      "to": "episode",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "solid"
+    },
+    {
+      "from": "contracts",
+      "to": "episode",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "dashed"
+    },
+    {
+      "from": "episode",
+      "to": "export",
+      "color": "#69CEBD",
+      "thickness": 2,
+      "style": "solid"
+    }
+  ],
+  "labels": [
+    {
+      "text": "SYSTEM ARCHITECTURE",
+      "x": 60,
+      "y": 55,
+      "font_size": 29,
+      "color": "#E7F1F6",
+      "anchor": "start"
+    },
+    {
+      "text": "by IPPLab",
+      "x": 1380,
+      "y": 55,
+      "font_size": 20,
+      "color": "#69CEBD",
+      "anchor": "end"
+    },
+    {
+      "text": "Separate processes and Python environments, connected by versioned interfaces.",
+      "x": 60,
+      "y": 95,
+      "font_size": 20,
+      "color": "#9CB3C5",
+      "anchor": "start"
+    },
+    {
+      "text": "HTTP",
+      "x": 477,
+      "y": 184,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "middle"
+    },
+    {
+      "text": "Index + jobs",
+      "x": 962,
+      "y": 184,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "middle"
+    },
+    {
+      "text": "Launch / monitor",
+      "x": 741,
+      "y": 311,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "start"
+    },
+    {
+      "text": "WebSocket",
+      "x": 477,
+      "y": 405,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "middle"
+    },
+    {
+      "text": "Simulator I/O",
+      "x": 962,
+      "y": 405,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "middle"
+    },
+    {
+      "text": "Write record",
+      "x": 741,
+      "y": 530,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "start"
+    },
+    {
+      "text": "Defines format",
+      "x": 477,
+      "y": 624,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "middle"
+    },
+    {
+      "text": "QA-accepted",
+      "x": 962,
+      "y": 624,
+      "font_size": 17,
+      "color": "#69CEBD",
+      "anchor": "middle"
+    },
+    {
+      "text": "SOLID  Runtime / data flow      DASHED  Schema dependency",
+      "x": 60,
+      "y": 757,
+      "font_size": 18,
+      "color": "#9CB3C5",
+      "anchor": "start"
+    },
+    {
+      "text": "The API orchestrates workers; each worker owns its control loop. Contracts have no SDK or database dependency.",
+      "x": 60,
+      "y": 800,
+      "font_size": 18,
+      "color": "#9CB3C5",
+      "anchor": "start"
+    },
+    {
+      "text": "SDKs, robot assets and the optional WebRTC console are configured separately. No training job is launched by export.",
+      "x": 60,
+      "y": 833,
+      "font_size": 18,
+      "color": "#9CB3C5",
+      "anchor": "start"
+    }
+  ]
+}
